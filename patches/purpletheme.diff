@@ -1,0 +1,17 @@
+diff --git a/config.def.h b/config.def.h
+index 24ca412..41035c8 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -10,9 +10,9 @@ static const char dmenufont[]       = "Source Code Pro:size=10";
+ static const char normbordercolor[] = "#444444";
+ static const char normbgcolor[]     = "#222222";
+ static const char normfgcolor[]     = "#bbbbbb";
+-static const char selbordercolor[]  = "#005577";
+-static const char selbgcolor[]      = "#005577";
+-static const char selfgcolor[]      = "#eeeeee";
++static const char selbordercolor[]  = "#d0a4d8";
++static const char selbgcolor[]      = "#d0a4d8";
++static const char selfgcolor[]      = "#222222";
+ static const unsigned int borderpx  = 1;        /* border pixel of windows */
+ static const unsigned int snap      = 32;       /* snap pixel */
+ static const int showbar            = 1;        /* 0 means no bar */
