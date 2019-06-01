@@ -66,6 +66,8 @@ static const char *decbrightness[] = { "xbacklight", "-dec", "10", NULL };
 static const char *incvolume[] = { "pactl", "set-sink-volume", "0", "+2%", NULL };
 static const char *decvolume[] = { "pactl", "set-sink-volume", "0", "-2%", NULL };
 static const char *mutevolume[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *suspend[] = { "systemctl", "suspend", NULL };
+static const char *hibernate[] = { "systemctl", "hibernate", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -97,6 +99,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY|ShiftMask|ControlMask, XK_s,      spawn,        {.v = suspend } },
+	{ MODKEY|ShiftMask|ControlMask, XK_h,      spawn,          {.v = hibernate } },
 	{ 0,               XF86XK_MonBrightnessUp, spawn,          {.v = incbrightness } },
 	{ 0,             XF86XK_MonBrightnessDown, spawn,          {.v = decbrightness } },
 	{ 0,             XF86XK_MonBrightnessDown, spawn,          {.v = decbrightness } },
